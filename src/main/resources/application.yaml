@@ -1,0 +1,30 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.gmail.com  # <-- isso resolve o PKIX
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+  thymeleaf:
+    enable: true
+
+envio:
+  email:
+    remetente: ''
+    nomeRemetente: 'Rafael'
+
+server:
+  port: 8082
